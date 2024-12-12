@@ -2,14 +2,13 @@ package com.wansue.wansue.domain;
 
 import jakarta.persistence.*;
 import lombok.AccessLevel;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
-@Entity
+@Entity @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Member extends DateEntity {
 
@@ -27,5 +26,5 @@ public class Member extends DateEntity {
     private String pwd;
 
     @OneToMany(mappedBy = "member")
-    private List<Task> tasks = new ArrayList<>();
+    private List<Board> Boards = new ArrayList<>();
 }
