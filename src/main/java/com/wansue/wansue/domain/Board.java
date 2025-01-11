@@ -11,7 +11,7 @@ import java.util.List;
 @Entity
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class Board {
+public class Board extends DateEntity{
 
     @Id
     @GeneratedValue
@@ -19,7 +19,6 @@ public class Board {
     private Long id;
 
     private String title;
-
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "member_id")
