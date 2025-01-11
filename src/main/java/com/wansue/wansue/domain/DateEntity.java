@@ -17,7 +17,6 @@ public class DateEntity {
 
     @CreatedDate
     @Column(updatable = false)
-    private LocalDateTime createDate;
 
     @LastModifiedDate
     private LocalDateTime updatedDate;

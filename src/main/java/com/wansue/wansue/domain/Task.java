@@ -36,8 +36,6 @@ public class Task extends DateEntity{
     @Enumerated(EnumType.STRING)
     private TaskStatus taskStatus = TaskStatus.TODO;
 
-    @Embedded
-    private Period period;
 
     //비즈니스 메서드
     public void changeTaskStatusTODO() {

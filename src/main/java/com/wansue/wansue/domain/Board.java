@@ -20,8 +20,6 @@ public class Board {
 
     private String title;
 
-    @Embedded
-    private Period period;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "member_id")
